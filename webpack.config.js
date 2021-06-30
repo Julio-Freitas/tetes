@@ -2,7 +2,7 @@ const HtmlWbepackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 
-const APP_PATH = "./src/dev"
+const APP_PATH = "./src/dev";
 
 const config = {
   mode: "development",
@@ -23,9 +23,15 @@ const config = {
         loader: 'babel-loader',
         exclude:/node_modules/ 
       },
-      {
+        {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [
+          {
+            loader: "style-loader",
+            options: { injectType: "singletonStyleTag" },
+          },
+          "css-loader",
+        ],
       },
     ]
   },
@@ -35,7 +41,7 @@ const config = {
         inject: true,
         template: path.join(APP_PATH, 'index.html')
       })    
-  ] 
+  ]
 }
 
 
