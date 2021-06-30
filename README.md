@@ -1,5 +1,5 @@
 # simple-component-library
-A library of React components created using `create-react-app`.
+Exemplo one Library using React
 ## Installation
 Run the following command:
 `npm install ui-react-components-gestao`
