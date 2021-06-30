@@ -11,7 +11,7 @@ const config = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
     library: "default",
-     libraryTarget: 'commonjs2',
+    libraryTarget: 'umd'
   },
 
   resolve: { extensions: ['.js', '.json'] },
