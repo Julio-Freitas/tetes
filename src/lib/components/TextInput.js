@@ -1,6 +1,6 @@
 import React from "react";
-import './style.css';
-
+import * as Styled from './style'
+// import "./TextInput.css";
 const TextInput = ({
   type = "text",
   label,
@@ -9,7 +9,7 @@ const TextInput = ({
   onChange,
   helpText
 }) => (
-  <div className="simple-form-group">
+  <Styled.Container className="simple-form-group">
     {label && <label className="simple-text-label">{label}</label>}
     <input
       type={type}
@@ -19,6 +19,6 @@ const TextInput = ({
       placeholder={placeholder}
     />
     {helpText && <small className="simple-form-text">{helpText}</small>}
-  </div>
+  </Styled.Container >
 );
 export default TextInput;
